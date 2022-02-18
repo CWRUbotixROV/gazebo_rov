@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<sdf version='1.6'>
+  <world name='default'>
+    <model name='unit_box'>
+      <pose>0.6 0 0 0 0 0</pose>
+      <link name='link'>
+        <gravity>0</gravity>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.01 0.32 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <plugin name="random_rotation" filename="librandom_rotation.so">
+        <roll>0.2</roll>
+        <pitch>0.2</pitch>
+        <yaw>3.1416</yaw>
+      </plugin>
+    </model>
+    <light name='user_directional_light_0' type='directional'>
+      <pose>0 0 1 0 0 0</pose>
+    </light>
+    <model name='camera_model'>
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <sensor name='camera1' type='camera'>
+          <pose>0 0.03 0 0 0 0</pose>
+          <camera>
+            <save enabled="true">
+              <path>/tmp/camera_save_tutorial</path>
+            </save>
+            <image>
+              <width>1280</width>
+              <height>960</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+            <lens>
+              <intrinsics>
+                <fx>500</fx>
+                <fy>500</fy>
+                <cx>640</cx>
+                <cy>480</cy>
+              </intrinsics>
+            </lens>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>5</update_rate>
+        </sensor>
+        <sensor name='camera2' type='camera'>
+          <pose>0 -0.03 0 0 0 0</pose>
+          <camera>
+            <save enabled="true">
+              <path>/tmp/camera_save_tutorial2</path>
+            </save>
+            <image>
+              <width>1280</width>
+              <height>960</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+            <lens>
+              <intrinsics>
+                <fx>500</fx>
+                <fy>500</fy>
+                <cx>640</cx>
+                <cy>480</cy>
+              </intrinsics>
+            </lens>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>5</update_rate>
+        </sensor>
+      </link>
+    </model>
+  </world>
+</sdf>
