@@ -37,7 +37,7 @@
           <pose>0 0.03 0 0 0 0</pose>
           <camera>
             <save enabled="true">
-              <path>/tmp/camera_save_tutorial</path>
+              <path>/tmp/camera_left</path>
             </save>
             <image>
               <width>1280</width>
@@ -63,7 +63,7 @@
           <pose>0 -0.03 0 0 0 0</pose>
           <camera>
             <save enabled="true">
-              <path>/tmp/camera_save_tutorial2</path>
+              <path>/tmp/camera_right</path>
             </save>
             <image>
               <width>1280</width>
