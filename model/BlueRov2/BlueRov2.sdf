@@ -355,9 +355,6 @@
     <plugin name="freebuoyancy_gazebo" filename="libfreebuoyancy_gazebo.so">
       <descriptionParam>robot_description</descriptionParam>
       <fluidTopic>current</fluidTopic>
-      <velocityFactor>1</velocityFactor>
-      <clampingValue>0.25</clampingValue>
-      <seed>0</seed>
       <alwaysOn>true</alwaysOn>
       <updateRate>.001</updateRate>
 
